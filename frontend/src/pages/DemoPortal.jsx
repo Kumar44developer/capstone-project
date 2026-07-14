@@ -96,3 +96,8 @@ export default function DemoPortal() {
       try {
         const data = await apiService.getVillages(subDistrictId, 1, 50);
         setVillages(data.data);
+      } catch (err) {
+        console.error('Failed to fetch villages:', err);
+      }
+    }
+  };
