@@ -44,3 +44,10 @@ export default function DemoPortal() {
       setLoading(false);
     }
   };
+
+
+  const handleStateChange = async (e) => {
+    const stateId = parseInt(e.target.value);
+    setSelectedState(stateId);
+    setSelectedDistrict(null);
+    setSelectedSubDistrict(null);
