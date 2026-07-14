@@ -35,3 +35,6 @@ export default function DemoPortal() {
         apiService.getStates(),
         apiService.getStats()
       ]);
+      setStates(statesData);
+      setStats(statsData);
+    } catch (err) {
