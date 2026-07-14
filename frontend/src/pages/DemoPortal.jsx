@@ -122,3 +122,8 @@ export default function DemoPortal() {
       alert('Please enter at least 2 characters');
       return;
     }
+
+    try {
+      setSearching(true);
+      const results = await apiService.searchVillages(searchQuery, 50);
+      setSearchResults(results);
