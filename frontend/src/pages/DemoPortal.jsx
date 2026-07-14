@@ -51,3 +51,7 @@ export default function DemoPortal() {
     setSelectedState(stateId);
     setSelectedDistrict(null);
     setSelectedSubDistrict(null);
+    setSelectedVillage(null);
+    setDistricts([]);
+    setSubDistricts([]);
+    setVillages([]);
