@@ -117,3 +117,8 @@ export default function DemoPortal() {
 
   const handleSearch = async (e) => {
     e.preventDefault();
+
+    if (!searchQuery || searchQuery.length < 2) {
+      alert('Please enter at least 2 characters');
+      return;
+    }
