@@ -106,3 +106,10 @@ export default function DemoPortal() {
     const villageId = parseInt(e.target.value);
     if (villageId) {
       try {
+        const hierarchy = await apiService.getVillageHierarchy(villageId);
+        setSelectedVillage(hierarchy);
+      } catch (err) {
+        console.error('Failed to fetch village hierarchy:', err);
+      }
+    }
+  };
