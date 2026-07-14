@@ -85,3 +85,9 @@ export default function DemoPortal() {
       }
     }
   };
+
+
+  const handleSubDistrictChange = async (e) => {
+    const subDistrictId = parseInt(e.target.value);
+    setSelectedSubDistrict(subDistrictId);
+    setSelectedVillage(null);
