@@ -21,3 +21,8 @@ export default function DemoPortal() {
   // Stats
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  // Load states and stats on mount
+  useEffect(() => {
+    loadInitialData();
+  }, []);
