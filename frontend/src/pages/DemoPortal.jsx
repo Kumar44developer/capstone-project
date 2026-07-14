@@ -38,3 +38,9 @@ export default function DemoPortal() {
       setStates(statesData);
       setStats(statsData);
     } catch (err) {
+      console.error('Failed to load initial data:', err);
+      alert('Failed to load data. Please refresh the page.');
+    } finally {
+      setLoading(false);
+    }
+  };
