@@ -50,3 +50,10 @@ Error generating stack: `+o.message+`
 curl "https://api.example.com/api/v1/villages/search?q=Mumbai" \\
   -H "x-api-key: YOUR_KEY" \\
   -H "x-api-secret: YOUR_SECRET"
+ Get complete hierarchy
+curl "https://api.example.com/api/v1/villages/123/hierarchy" \\
+  -H "x-api-key: YOUR_KEY" \\
+  -H "x-api-secret: YOUR_SECRET"`})})]})]})]})}function py(){return _.jsx("div",{className:"App",children:_.jsx(dy,{})})}Uo.createRoot(document.getElementById("root")).render(_.jsx(od.StrictMode,{children:_.jsx(py,{})}));
+
+
+  
