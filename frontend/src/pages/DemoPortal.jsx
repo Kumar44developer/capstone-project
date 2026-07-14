@@ -13,3 +13,7 @@ export default function DemoPortal() {
   const [selectedDistrict, setSelectedDistrict] = useState(null);
   const [selectedSubDistrict, setSelectedSubDistrict] = useState(null);
   const [selectedVillage, setSelectedVillage] = useState(null);
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const [searching, setSearching] = useState(false)
