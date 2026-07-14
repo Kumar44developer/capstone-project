@@ -60,3 +60,8 @@ export default function DemoPortal() {
       try {
         const data = await apiService.getDistricts(stateId);
         setDistricts(data);
+      } catch (err) {
+        console.error('Failed to fetch districts:', err);
+      }
+    }
+  };
