@@ -17,3 +17,7 @@ export default function DemoPortal() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [searching, setSearching] = useState(false)
+
+  // Stats
+  const [stats, setStats] = useState(null);
+  const [loading, setLoading] = useState(true);
