@@ -101,3 +101,8 @@ export default function DemoPortal() {
       }
     }
   };
+
+  const handleVillageSelect = async (e) => {
+    const villageId = parseInt(e.target.value);
+    if (villageId) {
+      try {
