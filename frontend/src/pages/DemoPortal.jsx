@@ -26,3 +26,12 @@ export default function DemoPortal() {
   useEffect(() => {
     loadInitialData();
   }, []);
+
+
+  const loadInitialData = async () => {
+    try {
+      setLoading(true);
+      const [statesData, statsData] = await Promise.all([
+        apiService.getStates(),
+        apiService.getStats()
+      ]);
