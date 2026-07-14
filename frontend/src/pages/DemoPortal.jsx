@@ -70,3 +70,6 @@ export default function DemoPortal() {
     const districtId = parseInt(e.target.value);
     setSelectedDistrict(districtId);
     setSelectedSubDistrict(null);
+    setSelectedVillage(null);
+    setSubDistricts([]);
+    setVillages([]);
