@@ -8,3 +8,6 @@ export default function DemoPortal() {
   const [districts, setDistricts] = useState([]);
   const [subDistricts, setSubDistricts] = useState([]);
   const [villages, setVillages] = useState([]);
+
+  const [selectedState, setSelectedState] = useState(null);
+  const [selectedDistrict, setSelectedDistrict] = useState(null);
