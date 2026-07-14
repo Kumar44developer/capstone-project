@@ -73,3 +73,10 @@ export default function DemoPortal() {
     setSelectedVillage(null);
     setSubDistricts([]);
     setVillages([]);
+
+
+
+    if (districtId) {
+      try {
+        const data = await apiService.getSubDistricts(districtId);
+        setSubDistricts(data);
