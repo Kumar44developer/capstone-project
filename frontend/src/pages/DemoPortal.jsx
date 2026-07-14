@@ -11,3 +11,5 @@ export default function DemoPortal() {
 
   const [selectedState, setSelectedState] = useState(null);
   const [selectedDistrict, setSelectedDistrict] = useState(null);
+  const [selectedSubDistrict, setSelectedSubDistrict] = useState(null);
+  const [selectedVillage, setSelectedVillage] = useState(null);
