@@ -80,3 +80,8 @@ export default function DemoPortal() {
       try {
         const data = await apiService.getSubDistricts(districtId);
         setSubDistricts(data);
+      } catch (err) {
+        console.error('Failed to fetch sub-districts:', err);
+      }
+    }
+  };
