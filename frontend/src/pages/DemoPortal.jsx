@@ -184,3 +184,7 @@ export default function DemoPortal() {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="search-input"
             />
+            <button type="submit" disabled={searching} className="btn btn-primary">
+              {searching ? 'Searching...' : 'Search'}
+            </button>
+          </form>
