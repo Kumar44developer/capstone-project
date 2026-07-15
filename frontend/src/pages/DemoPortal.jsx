@@ -145,3 +145,8 @@ export default function DemoPortal() {
       console.error('Failed to fetch village details:', err);
     }
   };
+
+
+  if (loading) {
+    return (
+      <div className="demo-portal loading-container">
