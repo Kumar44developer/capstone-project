@@ -155,3 +155,8 @@ export default function DemoPortal() {
       </div>
     );
   }
+
+    return (
+    <div className="demo-portal">
+      {/* Hero Section */}
+      <div className="hero">
