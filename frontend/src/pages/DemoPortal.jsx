@@ -130,3 +130,7 @@ export default function DemoPortal() {
     } catch (err) {
       console.error('Search failed:', err);
       alert('Search failed. Please try again.');
+    } finally {
+      setSearching(false);
+    }
+  };
