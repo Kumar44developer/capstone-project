@@ -160,3 +160,6 @@ export default function DemoPortal() {
     <div className="demo-portal">
       {/* Hero Section */}
       <div className="hero">
+        <h1>🗺️ India Geographic Data API</h1>
+        <p>Access India's complete village-level geographic hierarchy</p>
+        {stats && (
