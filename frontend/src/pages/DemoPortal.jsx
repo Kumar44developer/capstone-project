@@ -192,3 +192,6 @@ export default function DemoPortal() {
           {/* Search Results */}
           {searchResults.length > 0 && (
             <div className="search-results">
+              <h3>Results ({searchResults.length})</h3>
+              <div className="results-list">
+                {searchResults.map((item, idx) => (
