@@ -188,3 +188,7 @@ export default function DemoPortal() {
               {searching ? 'Searching...' : 'Search'}
             </button>
           </form>
+
+          {/* Search Results */}
+          {searchResults.length > 0 && (
+            <div className="search-results">
