@@ -134,3 +134,9 @@ export default function DemoPortal() {
       setSearching(false);
     }
   };
+
+  const handleSearchResultSelect = async (villageId) => {
+    try {
+      const hierarchy = await apiService.getVillageHierarchy(villageId);
+      setSelectedVillage(hierarchy);
+      setSearchResults([]);
