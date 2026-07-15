@@ -195,3 +195,8 @@ export default function DemoPortal() {
               <h3>Results ({searchResults.length})</h3>
               <div className="results-list">
                 {searchResults.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="result-item"
+                    onClick={() => handleSearchResultSelect(item.id)}
+                  >
