@@ -179,3 +179,8 @@ export default function DemoPortal() {
           <form onSubmit={handleSearch} className="search-form">
             <input
               type="text"
+              placeholder="Search for a village, district, or sub-district..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="search-input"
+            />
