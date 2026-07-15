@@ -210,3 +210,8 @@ export default function DemoPortal() {
             </div>
           )}
         </div>
+
+
+                {/* Hierarchical Browse Section */}
+        <div className="section hierarchy-section">
+          <h2>📍 Browse Hierarchically</h2>
