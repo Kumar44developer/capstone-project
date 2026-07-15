@@ -200,3 +200,7 @@ export default function DemoPortal() {
                     className="result-item"
                     onClick={() => handleSearchResultSelect(item.id)}
                   >
+                    <div className="result-title">{item.villageName}</div>
+                    <div className="result-path">
+                      {item.subDistrict} → {item.district} → {item.state}
+                    </div>
