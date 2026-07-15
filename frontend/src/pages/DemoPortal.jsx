@@ -167,3 +167,7 @@ export default function DemoPortal() {
             <div className="stat"><strong>{stats.states}</strong> States</div>
             <div className="stat"><strong>{stats.districts}</strong> Districts</div>
             <div className="stat"><strong>{stats.subDistricts}</strong> Sub-Districts</div>
+            <div className="stat"><strong>{(stats.villages / 1000).toFixed(0)}K</strong> Villages</div>
+          </div>
+        )}
+      </div>
