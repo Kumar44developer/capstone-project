@@ -176,3 +176,6 @@ export default function DemoPortal() {
         {/* Search Section */}
         <div className="section search-section">
           <h2>🔍 Quick Search</h2>
+          <form onSubmit={handleSearch} className="search-form">
+            <input
+              type="text"
