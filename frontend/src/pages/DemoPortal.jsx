@@ -127,3 +127,6 @@ export default function DemoPortal() {
       setSearching(true);
       const results = await apiService.searchVillages(searchQuery, 50);
       setSearchResults(results);
+    } catch (err) {
+      console.error('Search failed:', err);
+      alert('Search failed. Please try again.');
