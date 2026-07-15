@@ -163,3 +163,7 @@ export default function DemoPortal() {
         <h1>🗺️ India Geographic Data API</h1>
         <p>Access India's complete village-level geographic hierarchy</p>
         {stats && (
+          <div className="stats-bar">
+            <div className="stat"><strong>{stats.states}</strong> States</div>
+            <div className="stat"><strong>{stats.districts}</strong> Districts</div>
+            <div className="stat"><strong>{stats.subDistricts}</strong> Sub-Districts</div>
