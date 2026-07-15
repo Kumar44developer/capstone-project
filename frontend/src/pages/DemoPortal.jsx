@@ -171,3 +171,8 @@ export default function DemoPortal() {
           </div>
         )}
       </div>
+
+      <div className="container">
+        {/* Search Section */}
+        <div className="section search-section">
+          <h2>🔍 Quick Search</h2>
