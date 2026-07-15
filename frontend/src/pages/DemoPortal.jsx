@@ -204,3 +204,9 @@ export default function DemoPortal() {
                     <div className="result-path">
                       {item.subDistrict} → {item.district} → {item.state}
                     </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
