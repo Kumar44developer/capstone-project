@@ -150,3 +150,8 @@ export default function DemoPortal() {
   if (loading) {
     return (
       <div className="demo-portal loading-container">
+        <div className="spinner"></div>
+        <p>Loading geographic data...</p>
+      </div>
+    );
+  }
