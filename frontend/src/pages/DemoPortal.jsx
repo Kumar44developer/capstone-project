@@ -140,3 +140,8 @@ export default function DemoPortal() {
       const hierarchy = await apiService.getVillageHierarchy(villageId);
       setSelectedVillage(hierarchy);
       setSearchResults([]);
+      setSearchQuery('');
+    } catch (err) {
+      console.error('Failed to fetch village details:', err);
+    }
+  };
