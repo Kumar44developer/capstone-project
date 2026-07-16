@@ -269,3 +269,6 @@ export default function DemoPortal() {
             {/* Village Selector */}
             {villages.length > 0 && (
               <div className="control-group">
+                <label>Select Village ({villages.length}):</label>
+                <select onChange={handleVillageSelect}>
+                  <option value="">-- Choose a village --</option>
