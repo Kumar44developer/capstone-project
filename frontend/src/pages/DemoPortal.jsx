@@ -239,3 +239,11 @@ export default function DemoPortal() {
                 value={selectedDistrict || ''}
                 disabled={!selectedState}
               >
+                <option value="">-- Choose a district --</option>
+                {districts.map(district => (
+                  <option key={district.id} value={district.id}>
+                    {district.districtName}
+                  </option>
+                ))}
+              </select>
+            </div>
