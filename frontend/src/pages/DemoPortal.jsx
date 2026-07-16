@@ -313,3 +313,9 @@ export default function DemoPortal() {
                 <div className="detail-code">Code: {selectedVillage.village.code}</div>
               </div>
             </div>
+
+
+            <div className="formatted-address">
+              <h3>Formatted Address</h3>
+              <p className="address-text">{selectedVillage.formatted}</p>
+              <button
