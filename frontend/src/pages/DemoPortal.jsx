@@ -275,3 +275,8 @@ export default function DemoPortal() {
                   {villages.map(village => (
                     <option key={village.id} value={village.id}>
                       {village.villageName}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
