@@ -339,3 +339,8 @@ export default function DemoPortal() {
             <a href="/register" className="btn btn-primary btn-large">
               Sign Up Free
             </a>
+            <a href="/login" className="btn btn-outline btn-large">
+              Already Have Account? Login
+            </a>
+          </div>
+        </div>
