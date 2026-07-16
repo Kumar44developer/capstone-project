@@ -325,3 +325,8 @@ export default function DemoPortal() {
                   alert('Copied to clipboard!');
                 }}
               >
+                📋 Copy Address
+              </button>
+            </div>
+          </div>
+        )}
