@@ -289,3 +289,7 @@ export default function DemoPortal() {
             <h2>📌 Village Details</h2>
             <div className="details-grid">
               <div className="detail-item">
+                <label>State</label>
+                <div className="detail-value">{selectedVillage.state.name}</div>
+                <div className="detail-code">Code: {selectedVillage.state.code}</div>
+              </div>
