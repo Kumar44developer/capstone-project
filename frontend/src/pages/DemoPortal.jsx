@@ -225,3 +225,7 @@ export default function DemoPortal() {
                 {states.map(state => (
                   <option key={state.id} value={state.id}>
                     {state.stateName}
+                  </option>
+                ))}
+              </select>
+            </div>
