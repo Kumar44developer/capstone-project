@@ -265,3 +265,7 @@ export default function DemoPortal() {
                 ))}
               </select>
             </div>
+
+            {/* Village Selector */}
+            {villages.length > 0 && (
+              <div className="control-group">
