@@ -257,3 +257,8 @@ export default function DemoPortal() {
                 value={selectedSubDistrict || ''}
                 disabled={!selectedDistrict}
               >
+                <option value="">-- Choose a sub-district --</option>
+                {subDistricts.map(sd => (
+                  <option key={sd.id} value={sd.id}>
+                    {sd.subDistrictName}
+                  </option>
