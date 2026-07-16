@@ -286,3 +286,6 @@ export default function DemoPortal() {
         {/* Village Details */}
         {selectedVillage && (
           <div className="section village-details">
+            <h2>📌 Village Details</h2>
+            <div className="details-grid">
+              <div className="detail-item">
