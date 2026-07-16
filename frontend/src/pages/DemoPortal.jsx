@@ -215,3 +215,6 @@ export default function DemoPortal() {
                 {/* Hierarchical Browse Section */}
         <div className="section hierarchy-section">
           <h2>📍 Browse Hierarchically</h2>
+
+          <div className="hierarchy-controls">
+            {/* State Selector */}
