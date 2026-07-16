@@ -229,3 +229,9 @@ export default function DemoPortal() {
                 ))}
               </select>
             </div>
+
+
+            {/* District Selector */}
+            <div className="control-group">
+              <label>Select District:</label>
+              <select
