@@ -306,3 +306,7 @@ export default function DemoPortal() {
                 <div className="detail-value">{selectedVillage.subDistrict.name}</div>
                 <div className="detail-code">Code: {selectedVillage.subDistrict.code}</div>
               </div>
+
+              <div className="detail-item">
+                <label>Village</label>
+                <div className="detail-value">{selectedVillage.village.name}</div>
