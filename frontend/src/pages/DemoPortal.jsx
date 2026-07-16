@@ -335,3 +335,7 @@ export default function DemoPortal() {
         <div className="section cta-section">
           <h2>🚀 Ready to Integrate?</h2>
           <p>Get programmatic access to all geographic data with our REST API</p>
+          <div className="cta-buttons">
+            <a href="/register" className="btn btn-primary btn-large">
+              Sign Up Free
+            </a>
