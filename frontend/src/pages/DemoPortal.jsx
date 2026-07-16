@@ -218,3 +218,6 @@ export default function DemoPortal() {
 
           <div className="hierarchy-controls">
             {/* State Selector */}
+            <div className="control-group">
+              <label>Select State:</label>
+              <select onChange={handleStateChange} value={selectedState || ''}>
