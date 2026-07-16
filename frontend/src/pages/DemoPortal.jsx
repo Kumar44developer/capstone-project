@@ -319,3 +319,9 @@ export default function DemoPortal() {
               <h3>Formatted Address</h3>
               <p className="address-text">{selectedVillage.formatted}</p>
               <button
+                className="btn btn-secondary"
+                onClick={() => {
+                  navigator.clipboard.writeText(selectedVillage.formatted);
+                  alert('Copied to clipboard!');
+                }}
+              >
