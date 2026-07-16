@@ -272,3 +272,6 @@ export default function DemoPortal() {
                 <label>Select Village ({villages.length}):</label>
                 <select onChange={handleVillageSelect}>
                   <option value="">-- Choose a village --</option>
+                  {villages.map(village => (
+                    <option key={village.id} value={village.id}>
+                      {village.villageName}
