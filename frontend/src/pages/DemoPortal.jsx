@@ -282,3 +282,7 @@ export default function DemoPortal() {
             )}
           </div>
         </div>
+
+        {/* Village Details */}
+        {selectedVillage && (
+          <div className="section village-details">
