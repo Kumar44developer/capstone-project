@@ -221,3 +221,7 @@ export default function DemoPortal() {
             <div className="control-group">
               <label>Select State:</label>
               <select onChange={handleStateChange} value={selectedState || ''}>
+                <option value="">-- Choose a state --</option>
+                {states.map(state => (
+                  <option key={state.id} value={state.id}>
+                    {state.stateName}
