@@ -235,3 +235,7 @@ export default function DemoPortal() {
             <div className="control-group">
               <label>Select District:</label>
               <select
+                onChange={handleDistrictChange}
+                value={selectedDistrict || ''}
+                disabled={!selectedState}
+              >
