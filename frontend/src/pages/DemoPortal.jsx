@@ -360,3 +360,9 @@ curl "https://api.example.com/api/v1/villages/search?q=Mumbai" \\
 curl "https://api.example.com/api/v1/villages/123/hierarchy" \\
   -H "x-api-key: YOUR_KEY" \\
   -H "x-api-secret: YOUR_SECRET"`}</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
