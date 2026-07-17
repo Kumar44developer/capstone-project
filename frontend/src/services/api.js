@@ -106,3 +106,6 @@ export const apiService = {
     const response = await api.get(`/b2b/usage?days=${days}`);
     return response.data.stats;
   },
+
+  getQuotas: async () => {
+    const response = await api.get('/b2b/quotas');
