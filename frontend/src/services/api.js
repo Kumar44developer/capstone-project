@@ -37,3 +37,9 @@ export const apiService = {
     const response = await api.get('/api/v1/states');
     return response.data.data;
   },
+
+
+  getDistricts: async (stateId) => {
+    const response = await api.get(`/api/v1/states/${stateId}/districts`);
+    return response.data.data;
+  },
