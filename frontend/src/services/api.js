@@ -25,3 +25,6 @@ api.interceptors.response.use(
       localStorage.removeItem('userToken');
       window.location.href = '/login';
     }
+    return Promise.reject(error);
+  }
+);
