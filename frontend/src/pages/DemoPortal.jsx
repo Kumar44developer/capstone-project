@@ -344,3 +344,15 @@ export default function DemoPortal() {
             </a>
           </div>
         </div>
+
+
+        {/* API Documentation */}
+        <div className="section api-docs">
+          <h2>📚 API Quick Start</h2>
+          <div className="code-block">
+            <pre>{`# Search for villages
+
+
+
+
+        
