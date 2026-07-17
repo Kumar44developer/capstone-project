@@ -84,3 +84,8 @@ export const apiService = {
     localStorage.setItem('user', JSON.stringify(response.data.user));
     return response.data;
   },
+
+  logout: () => {
+    localStorage.removeItem('userToken');
+    localStorage.removeItem('user');
+  },
