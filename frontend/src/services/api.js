@@ -28,3 +28,12 @@ api.interceptors.response.use(
     return Promise.reject(error);
   }
 );
+
+
+export const apiService = {
+  // ============== PUBLIC ENDPOINTS ==============
+  
+  getStates: async () => {
+    const response = await api.get('/api/v1/states');
+    return response.data.data;
+  },
