@@ -60,3 +60,9 @@ export const apiService = {
     const response = await api.get(`/api/v1/villages/search?q=${query}&limit=${limit}`);
     return response.data.data;
   },
+
+
+  getVillageHierarchy: async (villageId) => {
+    const response = await api.get(`/api/v1/villages/${villageId}/hierarchy`);
+    return response.data.hierarchy;
+  },
