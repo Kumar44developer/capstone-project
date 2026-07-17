@@ -81,3 +81,6 @@ export const apiService = {
     login: async (email, password) => {
     const response = await api.post('/api/auth/login', { email, password });
     localStorage.setItem('userToken', response.data.token);
+    localStorage.setItem('user', JSON.stringify(response.data.user));
+    return response.data;
+  },
