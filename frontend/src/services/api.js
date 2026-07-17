@@ -109,3 +109,6 @@ export const apiService = {
 
   getQuotas: async () => {
     const response = await api.get('/b2b/quotas');
+    return response.data.quotas;
+  }
+};
