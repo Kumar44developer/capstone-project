@@ -112,3 +112,6 @@ export const apiService = {
     return response.data.quotas;
   }
 };
+
+
+export default api;
