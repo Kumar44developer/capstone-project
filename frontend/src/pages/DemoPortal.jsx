@@ -351,7 +351,9 @@ export default function DemoPortal() {
           <h2>📚 API Quick Start</h2>
           <div className="code-block">
             <pre>{`# Search for villages
-
+curl "https://api.example.com/api/v1/villages/search?q=Mumbai" \\
+  -H "x-api-key: YOUR_KEY" \\
+  -H "x-api-secret: YOUR_SECRET"
 
 
 
