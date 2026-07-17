@@ -77,3 +77,7 @@ export const apiService = {
     const response = await api.post('/api/auth/register', { email, name, password });
     return response.data.user;
   },
+
+    login: async (email, password) => {
+    const response = await api.post('/api/auth/login', { email, password });
+    localStorage.setItem('userToken', response.data.token);
