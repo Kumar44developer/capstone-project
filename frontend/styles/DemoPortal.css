@@ -87,3 +87,9 @@ export const apiService = {
     localStorage.removeItem('userToken');
     localStorage.removeItem('user');
   },
+
+
+  generateApiKey: async () => {
+    const response = await api.post('/api/auth/generate-api-key');
+    return response.data.credentials;
+  },
