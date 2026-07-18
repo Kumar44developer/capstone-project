@@ -47,3 +47,8 @@ export const apiService = {
     const response = await api.get(`/api/v1/districts/${districtId}/subdistricts`);
     return response.data.data;
   },
+
+  getVillages: async (subDistrictId, page = 1, limit = 50) => {
+    const response = await api.get(`/api/v1/subdistricts/${subDistrictId}/villages?page=${page}&limit=${limit}`);
+    return response.data;
+  },
