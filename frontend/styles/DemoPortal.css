@@ -68,3 +68,9 @@ export const apiService = {
     const response = await api.get('/api/v1/stats');
     return response.data.stats;
   },
+
+
+  register: async (email, name, password) => {
+    const response = await api.post('/api/auth/register', { email, name, password });
+    return response.data.user;
+  },
