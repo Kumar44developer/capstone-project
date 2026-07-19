@@ -26,6 +26,11 @@ body {
 }
 
 
+.App main {
+  padding: 1rem 2rem;
+  flex: 1;
+}
+
 .App header h1 {
   margin: 0;
   font-size: 1.2rem;
