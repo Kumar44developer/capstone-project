@@ -20,3 +20,7 @@ body {
   padding: 1rem 2rem;
   background: #0d47a1;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
