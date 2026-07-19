@@ -15,3 +15,8 @@ body {
   min-height: 100vh;
   background: #f4f7fb;
 }
+
+.App header {
+  padding: 1rem 2rem;
+  background: #0d47a1;
+  color: #fff;
