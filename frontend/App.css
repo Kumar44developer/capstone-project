@@ -9,3 +9,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background: #f4f7fb;
+}
