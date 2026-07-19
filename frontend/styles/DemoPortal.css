@@ -93,3 +93,8 @@ export const apiService = {
     const response = await api.post('/api/auth/generate-api-key');
     return response.data.credentials;
   },
+
+  getProfile: async () => {
+    const response = await api.get('/api/b2b/profile');
+    return response.data.user;
+  },
