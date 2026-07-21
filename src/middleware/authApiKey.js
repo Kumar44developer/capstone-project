@@ -15,3 +15,6 @@ module.exports = async (req, res, next) => {
         message: 'Please include x-api-key and x-api-secret headers'
       });
     }
+
+    const keyRecords = await prisma.apiKey.findMany({
+      where: { isActive: true },
