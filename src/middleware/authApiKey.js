@@ -11,3 +11,7 @@ module.exports = async (req, res, next) => {
 
     if (!apiKey || !apiSecret) {
       return res.status(401).json({ 
+        error: 'Missing API credentials',
+        message: 'Please include x-api-key and x-api-secret headers'
+      });
+    }
