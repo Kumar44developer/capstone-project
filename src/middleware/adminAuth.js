@@ -18,3 +18,8 @@ module.exports = async (req, res, next) => {
     next();
   } catch (err) {
     console.error('Admin Auth Error:', err);
+    return res.status(500).json({ 
+      error: 'Authorization failed'
+    });
+  }
+};
