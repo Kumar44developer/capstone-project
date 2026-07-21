@@ -18,3 +18,5 @@ module.exports = async (req, res, next) => {
 
     const keyRecords = await prisma.apiKey.findMany({
       where: { isActive: true },
+      include: { user: true }
+    });
