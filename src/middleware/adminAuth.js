@@ -10,3 +10,7 @@ module.exports = async (req, res, next) => {
 
     if (!user || user.tier !== 'admin') {
       return res.status(403).json({ 
+        error: 'Access denied',
+        message: 'You do not have permission to access this resource'
+      });
+    }
