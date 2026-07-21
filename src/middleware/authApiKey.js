@@ -20,3 +20,7 @@ module.exports = async (req, res, next) => {
       where: { isActive: true },
       include: { user: true }
     });
+
+    let foundKey = null;
+    for (const key of keyRecords) {
+      const keyMatch = await bcryptjs.compare(apiKey, key.keyHash);
