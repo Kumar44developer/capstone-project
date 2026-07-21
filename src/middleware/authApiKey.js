@@ -39,3 +39,6 @@ module.exports = async (req, res, next) => {
         message: 'API key or secret is incorrect'
       });
     }
+
+    if (foundKey.expiresAt && new Date() > foundKey.expiresAt) {
+      return res.status(401).json({ 
