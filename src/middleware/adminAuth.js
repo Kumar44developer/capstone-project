@@ -14,3 +14,7 @@ module.exports = async (req, res, next) => {
         message: 'You do not have permission to access this resource'
       });
     }
+
+    next();
+  } catch (err) {
+    console.error('Admin Auth Error:', err);
