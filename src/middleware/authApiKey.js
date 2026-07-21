@@ -42,3 +42,7 @@ module.exports = async (req, res, next) => {
 
     if (foundKey.expiresAt && new Date() > foundKey.expiresAt) {
       return res.status(401).json({ 
+        error: 'API key expired',
+        message: 'This API key has expired. Please generate a new one.'
+      });
+    }
