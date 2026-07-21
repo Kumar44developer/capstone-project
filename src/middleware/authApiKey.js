@@ -7,3 +7,7 @@ module.exports = async (req, res, next) => {
   try {
     const apiKey = req.headers['x-api-key'];
     const apiSecret = req.headers['x-api-secret'];
+
+
+    if (!apiKey || !apiSecret) {
+      return res.status(401).json({ 
