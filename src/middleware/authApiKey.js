@@ -25,3 +25,9 @@ module.exports = async (req, res, next) => {
     for (const key of keyRecords) {
       const keyMatch = await bcryptjs.compare(apiKey, key.keyHash);
       const secretMatch = await bcryptjs.compare(apiSecret, key.secretHash);
+
+      if (keyMatch && secretMatch) {
+        foundKey = key;
+        break;
+      }
+    }
