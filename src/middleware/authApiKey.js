@@ -61,3 +61,7 @@ module.exports = async (req, res, next) => {
     await prisma.apiKey.update({
       where: { id: foundKey.id },
       data: { 
+        requestsToday: foundKey.requestsToday + 1,
+        lastUsed: new Date()
+      }
+    });
