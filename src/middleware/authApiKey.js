@@ -82,3 +82,6 @@ module.exports = async (req, res, next) => {
           method: req.method,
           status: res.statusCode,
           responseTime,
+          bytesTransferred: JSON.stringify(data).length
+        }
+      }).catch(err => console.error('Failed to log API request:', err));
