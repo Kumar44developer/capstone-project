@@ -53,3 +53,7 @@ module.exports = async (req, res, next) => {
     if (foundKey.requestsToday >= foundKey.dailyLimit) {
       return res.status(429).json({ 
         error: 'Daily API limit exceeded',
+        message: `You have exceeded your daily limit of ${foundKey.dailyLimit} requests`,
+        resetTime: new Date(today.getTime() + 24 * 60 * 60 * 1000).toISOString()
+      });
+    }
