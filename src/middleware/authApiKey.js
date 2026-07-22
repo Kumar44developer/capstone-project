@@ -68,3 +68,6 @@ module.exports = async (req, res, next) => {
 
     req.user = foundKey.user;
     req.apiKey = foundKey;
+
+    const startTime = Date.now();
+    const originalJson = res.json;
