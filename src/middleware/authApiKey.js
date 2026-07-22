@@ -79,3 +79,6 @@ module.exports = async (req, res, next) => {
         data: {
           userId: foundKey.user.id,
           endpoint: req.path,
+          method: req.method,
+          status: res.statusCode,
+          responseTime,
