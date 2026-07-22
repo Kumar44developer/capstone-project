@@ -71,3 +71,6 @@ module.exports = async (req, res, next) => {
 
     const startTime = Date.now();
     const originalJson = res.json;
+
+    res.json = function(data) {
+      const responseTime = Date.now() - startTime;
