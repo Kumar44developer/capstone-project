@@ -88,3 +88,8 @@ module.exports = async (req, res, next) => {
 
       return originalJson.call(this, data);
     };
+
+    next();
+  } catch (err) {
+    console.error('API Key Auth Error:', err);
+    return res.status(500).json({ 
