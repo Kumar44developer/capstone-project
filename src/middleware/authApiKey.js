@@ -74,3 +74,8 @@ module.exports = async (req, res, next) => {
 
     res.json = function(data) {
       const responseTime = Date.now() - startTime;
+
+      prisma.apiLog.create({
+        data: {
+          userId: foundKey.user.id,
+          endpoint: req.path,
