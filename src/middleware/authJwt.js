@@ -10,3 +10,6 @@ module.exports = (req, res, next) => {
         message: 'Please include Authorization header with Bearer token'
       });
     }
+
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = decoded;
