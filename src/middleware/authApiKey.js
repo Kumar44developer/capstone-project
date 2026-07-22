@@ -65,3 +65,6 @@ module.exports = async (req, res, next) => {
         lastUsed: new Date()
       }
     });
+
+    req.user = foundKey.user;
+    req.apiKey = foundKey;
