@@ -85,3 +85,6 @@ module.exports = async (req, res, next) => {
           bytesTransferred: JSON.stringify(data).length
         }
       }).catch(err => console.error('Failed to log API request:', err));
+
+      return originalJson.call(this, data);
+    };
