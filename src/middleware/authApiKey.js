@@ -57,3 +57,7 @@ module.exports = async (req, res, next) => {
         resetTime: new Date(today.getTime() + 24 * 60 * 60 * 1000).toISOString()
       });
     }
+
+    await prisma.apiKey.update({
+      where: { id: foundKey.id },
+      data: { 
