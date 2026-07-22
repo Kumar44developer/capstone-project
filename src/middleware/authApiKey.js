@@ -46,3 +46,6 @@ module.exports = async (req, res, next) => {
         message: 'This API key has expired. Please generate a new one.'
       });
     }
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
