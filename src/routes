@@ -90,3 +90,5 @@ router.get('/analytics', async (req, res) => {
       prisma.user.count(),
       prisma.apiKey.count(),
       prisma.apiLog.count(),
+      prisma.village.count(),
+      prisma.apiLog.aggregate({
