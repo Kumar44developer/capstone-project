@@ -83,3 +83,7 @@ router.patch('/users/:userId/tier', async (req, res) => {
     res.status(500).json({ error: 'Failed to update user tier' });
   }
 });
+
+router.get('/analytics', async (req, res) => {
+  try {
+    const [totalUsers, totalApiKeys, totalLogs, totalVillages, stats] = await Promise.all([
