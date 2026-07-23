@@ -87,3 +87,6 @@ router.patch('/users/:userId/tier', async (req, res) => {
 router.get('/analytics', async (req, res) => {
   try {
     const [totalUsers, totalApiKeys, totalLogs, totalVillages, stats] = await Promise.all([
+      prisma.user.count(),
+      prisma.apiKey.count(),
+      prisma.apiLog.count(),
