@@ -138,3 +138,7 @@ router.get('/analytics', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch analytics' });
   }
 });
+
+router.get('/data-stats', async (req, res) => {
+  try {
+    const [stateCount, districtCount, subDistrictCount, villageCount] = await Promise.all([
