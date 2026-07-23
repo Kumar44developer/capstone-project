@@ -121,3 +121,6 @@ router.get('/analytics', async (req, res) => {
           totalApiKeys,
           totalRequests: totalLogs,
           avgResponseTime: Math.round(stats._avg.responseTime || 0),
+          minResponseTime: stats._min.responseTime || 0,
+          maxResponseTime: stats._max.responseTime || 0
+        },
