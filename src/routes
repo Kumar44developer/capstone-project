@@ -102,3 +102,7 @@ router.get('/analytics', async (req, res) => {
       by: ['tier'],
       _count: true
     });
+
+    const topEndpoints = await prisma.apiLog.groupBy({
+      by: ['endpoint'],
+      _count: { id: true },
