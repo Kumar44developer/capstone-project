@@ -127,3 +127,9 @@ router.get('/analytics', async (req, res) => {
         data: {
           totalVillages
         },
+        topEndpoints: topEndpoints.map(ep => ({
+          endpoint: ep.endpoint,
+          requests: ep._count.id
+        }))
+      }
+    });
