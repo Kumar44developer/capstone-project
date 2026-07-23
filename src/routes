@@ -29,3 +29,6 @@ router.get('/users', async (req, res) => {
     res.json({
       success: true,
       count: users.length,
+      data: users
+    });
+  } catch (err) {
