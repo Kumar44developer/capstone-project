@@ -109,3 +109,7 @@ router.get('/analytics', async (req, res) => {
       orderBy: { _count: { id: 'desc' } },
       take: 10
     });
+
+    res.json({
+      success: true,
+      analytics: {
