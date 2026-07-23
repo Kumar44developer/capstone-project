@@ -62,3 +62,6 @@ router.patch('/users/:userId/tier', async (req, res) => {
       'pro': 1000000,
       'unlimited': 999999999
     };
+
+    await prisma.apiKey.updateMany({
+      where: { userId },
