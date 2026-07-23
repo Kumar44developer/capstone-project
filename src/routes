@@ -44,3 +44,8 @@ router.patch('/users/:userId/tier', async (req, res) => {
     
     const validTiers = ['free', 'premium', 'pro', 'unlimited'];
     if (!validTiers.includes(tier)) {
+      return res.status(400).json({ 
+        error: 'Invalid tier',
+        validTiers
+      });
+    }
