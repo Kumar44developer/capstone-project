@@ -67,3 +67,9 @@ router.patch('/users/:userId/tier', async (req, res) => {
       where: { userId },
       data: { dailyLimit: tierLimits[tier] }
     });
+
+    
+    res.json({
+      success: true,
+      message: `User tier updated to ${tier}`,
+      user: {
