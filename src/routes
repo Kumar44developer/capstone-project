@@ -124,3 +124,6 @@ router.get('/analytics', async (req, res) => {
           minResponseTime: stats._min.responseTime || 0,
           maxResponseTime: stats._max.responseTime || 0
         },
+        data: {
+          totalVillages
+        },
