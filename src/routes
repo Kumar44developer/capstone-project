@@ -92,3 +92,8 @@ router.get('/analytics', async (req, res) => {
       prisma.apiLog.count(),
       prisma.village.count(),
       prisma.apiLog.aggregate({
+        _avg: { responseTime: true },
+        _min: { responseTime: true },
+        _max: { responseTime: true }
+      })
+    ]);
