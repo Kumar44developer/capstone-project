@@ -65,3 +65,5 @@ router.patch('/users/:userId/tier', async (req, res) => {
 
     await prisma.apiKey.updateMany({
       where: { userId },
+      data: { dailyLimit: tierLimits[tier] }
+    });
