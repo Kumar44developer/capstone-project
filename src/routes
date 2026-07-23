@@ -113,3 +113,7 @@ router.get('/analytics', async (req, res) => {
     res.json({
       success: true,
       analytics: {
+        users: {
+          total: totalUsers,
+          byTier: tierDistribution.reduce((acc, t) => ({...acc, [t.tier]: t._count}), {})
+        },
