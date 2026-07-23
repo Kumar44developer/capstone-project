@@ -142,3 +142,5 @@ router.get('/analytics', async (req, res) => {
 router.get('/data-stats', async (req, res) => {
   try {
     const [stateCount, districtCount, subDistrictCount, villageCount] = await Promise.all([
+      prisma.state.count(),
+      prisma.district.count(),
