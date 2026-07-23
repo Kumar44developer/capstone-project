@@ -54,3 +54,8 @@ router.patch('/users/:userId/tier', async (req, res) => {
       where: { id: userId },
       data: { tier }
     });
+
+    // Update API key limits
+    const tierLimits = {
+      'free': 1000,
+      'premium': 100000,
