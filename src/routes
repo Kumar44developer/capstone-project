@@ -16,3 +16,9 @@ router.get('/users', async (req, res) => {
         isActive: true,
         createdAt: true,
         _count: { 
+          select: { 
+            apiKeys: true, 
+            apiLogs: true 
+          } 
+        }
+      },
