@@ -117,3 +117,7 @@ router.get('/analytics', async (req, res) => {
           total: totalUsers,
           byTier: tierDistribution.reduce((acc, t) => ({...acc, [t.tier]: t._count}), {})
         },
+        api: {
+          totalApiKeys,
+          totalRequests: totalLogs,
+          avgResponseTime: Math.round(stats._avg.responseTime || 0),
