@@ -52,3 +52,5 @@ router.patch('/users/:userId/tier', async (req, res) => {
 
     const user = await prisma.user.update({
       where: { id: userId },
+      data: { tier }
+    });
