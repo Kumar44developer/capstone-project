@@ -97,3 +97,8 @@ router.get('/analytics', async (req, res) => {
         _max: { responseTime: true }
       })
     ]);
+
+    const tierDistribution = await prisma.user.groupBy({
+      by: ['tier'],
+      _count: true
+    });
