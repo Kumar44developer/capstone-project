@@ -36,3 +36,8 @@ router.get('/users', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch users' });
   }
 });
+
+router.patch('/users/:userId/tier', async (req, res) => {
+  try {
+    const userId = parseInt(req.params.userId);
+    const { tier } = req.body;
