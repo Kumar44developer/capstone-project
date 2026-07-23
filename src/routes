@@ -78,4 +78,8 @@ router.patch('/users/:userId/tier', async (req, res) => {
         tier: user.tier
       }
     });
-
+  } catch (err) {
+    console.error('Error updating user tier:', err);
+    res.status(500).json({ error: 'Failed to update user tier' });
+  }
+});
