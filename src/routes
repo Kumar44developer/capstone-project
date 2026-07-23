@@ -41,3 +41,6 @@ router.patch('/users/:userId/tier', async (req, res) => {
   try {
     const userId = parseInt(req.params.userId);
     const { tier } = req.body;
+    
+    const validTiers = ['free', 'premium', 'pro', 'unlimited'];
+    if (!validTiers.includes(tier)) {
