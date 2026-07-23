@@ -73,3 +73,9 @@ router.patch('/users/:userId/tier', async (req, res) => {
       success: true,
       message: `User tier updated to ${tier}`,
       user: {
+        id: user.id,
+        email: user.email,
+        tier: user.tier
+      }
+    });
+
