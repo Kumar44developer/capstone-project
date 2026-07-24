@@ -182,3 +182,8 @@ router.get('/api-logs', async (req, res) => {
     const status = req.query.status;
 
     const where = status ? { status: parseInt(status) } : {};
+
+    const logs = await prisma.apiLog.findMany({
+      where,
+      include: {
+        user: {
