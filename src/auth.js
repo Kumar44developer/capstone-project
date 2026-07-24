@@ -46,3 +46,5 @@ router.post('/register', async (req, res) => {
       }
     });
       
+    res.status(201).json({
+      success: true,
