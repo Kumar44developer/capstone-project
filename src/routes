@@ -187,3 +187,6 @@ router.get('/api-logs', async (req, res) => {
       where,
       include: {
         user: {
+          select: { email: true, name: true }
+        }
+      },
