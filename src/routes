@@ -193,3 +193,6 @@ router.get('/api-logs', async (req, res) => {
       orderBy: { createdAt: 'desc' },
       take: limit
     });
+
+    res.json({
+      success: true,
