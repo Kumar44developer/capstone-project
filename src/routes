@@ -169,3 +169,6 @@ router.get('/data-stats', async (req, res) => {
         orphanedRecords: orphanedVillages,
         dataIntegrity: orphanedVillages === 0 ? 'OK' : 'WARNING'
       }
+    });
+  } catch (err) {
+    console.error('Error fetching data stats:', err);
