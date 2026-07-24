@@ -165,3 +165,7 @@ router.get('/data-stats', async (req, res) => {
         districts: districtCount,
         subDistricts: subDistrictCount,
         villages: villageCount,
+        total: stateCount + districtCount + subDistrictCount + villageCount,
+        orphanedRecords: orphanedVillages,
+        dataIntegrity: orphanedVillages === 0 ? 'OK' : 'WARNING'
+      }
