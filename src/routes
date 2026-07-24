@@ -180,3 +180,5 @@ router.get('/api-logs', async (req, res) => {
   try {
     const limit = Math.min(100, parseInt(req.query.limit) || 50);
     const status = req.query.status;
+
+    const where = status ? { status: parseInt(status) } : {};
