@@ -196,3 +196,6 @@ router.get('/api-logs', async (req, res) => {
 
     res.json({
       success: true,
+      count: logs.length,
+      data: logs
+    });
