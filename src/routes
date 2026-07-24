@@ -178,3 +178,5 @@ router.get('/data-stats', async (req, res) => {
 
 router.get('/api-logs', async (req, res) => {
   try {
+    const limit = Math.min(100, parseInt(req.query.limit) || 50);
+    const status = req.query.status;
