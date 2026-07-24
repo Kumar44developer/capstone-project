@@ -16,3 +16,7 @@ router.post('/register', async (req, res) => {
         message: 'Please provide email, name, and password'
       });
     }
+
+    const existing = await prisma.user.findUnique({ 
+      where: { email } 
+    });
