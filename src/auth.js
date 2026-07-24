@@ -37,3 +37,8 @@ router.post('/register', async (req, res) => {
         passwordHash,
         tier: 'free'
       },
+      select: {
+        id: true,
+        email: true,
+
+      
