@@ -27,3 +27,5 @@ router.post('/register', async (req, res) => {
         message: 'This email is already registered'
       });
     }
+
+    const passwordHash = await bcryptjs.hash(password, 10);
