@@ -190,3 +190,6 @@ router.get('/api-logs', async (req, res) => {
           select: { email: true, name: true }
         }
       },
+      orderBy: { createdAt: 'desc' },
+      take: limit
+    });
