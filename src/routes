@@ -162,3 +162,6 @@ router.get('/data-stats', async (req, res) => {
       success: true,
       dataStats: {
         states: stateCount,
+        districts: districtCount,
+        subDistricts: subDistrictCount,
+        villages: villageCount,
