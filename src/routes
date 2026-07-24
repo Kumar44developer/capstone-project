@@ -147,3 +147,7 @@ router.get('/data-stats', async (req, res) => {
       prisma.subDistrict.count(),
       prisma.village.count()
     ]);
+
+    const orphanedVillages = await prisma.village.count({
+      where: {
+        subDistrictId: {
