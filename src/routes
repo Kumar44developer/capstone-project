@@ -175,3 +175,6 @@ router.get('/data-stats', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch data statistics' });
   }
 });
+
+router.get('/api-logs', async (req, res) => {
+  try {
