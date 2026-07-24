@@ -53,3 +53,6 @@ router.post('/register', async (req, res) => {
     });
   } catch (err) {
     console.error('Registration Error:', err);
+    res.status(500).json({ error: 'Registration failed' });
+  }
+});
