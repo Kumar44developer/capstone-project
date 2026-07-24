@@ -201,3 +201,6 @@ router.get('/api-logs', async (req, res) => {
     });
   } catch (err) {
     console.error('Error fetching API logs:', err);
+    res.status(500).json({ error: 'Failed to fetch API logs' });
+  }
+});
