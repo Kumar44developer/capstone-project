@@ -29,3 +29,7 @@ router.post('/register', async (req, res) => {
     }
 
     const passwordHash = await bcryptjs.hash(password, 10);
+
+    const user = await prisma.user.create({
+      data: {
+        email,
