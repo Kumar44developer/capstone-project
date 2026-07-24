@@ -153,3 +153,7 @@ router.get('/data-stats', async (req, res) => {
         subDistrictId: {
           notIn: await prisma.subDistrict.findMany({
             select: { id: true }
+          }).then(sds => sds.map(sd => sd.id))
+        }
+      }
+    });
