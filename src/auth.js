@@ -126,3 +126,7 @@ router.post('/generate-api-key', require('../middleware/authJwt'), async (req, r
 
     const tierLimits = {
       'free': 1000,
+      'premium': 100000,
+      'pro': 1000000,
+      'unlimited': 999999999
+    };
