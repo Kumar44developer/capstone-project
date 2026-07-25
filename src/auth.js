@@ -94,3 +94,6 @@ router.post('/login', async (req, res) => {
         email: user.email, 
         tier: user.tier 
       },
+      process.env.JWT_SECRET,
+      { expiresIn: '7d' }
+    );
