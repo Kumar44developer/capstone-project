@@ -118,3 +118,5 @@ router.post('/login', async (req, res) => {
 
 router.post('/generate-api-key', require('../middleware/authJwt'), async (req, res) => {
   try {
+    const apiKey = 'sk_' + Math.random().toString(36).substring(2, 34);
+    const apiSecret = 'secret_' + Math.random().toString(36).substring(2, 42);
