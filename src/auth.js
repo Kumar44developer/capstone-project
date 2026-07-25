@@ -115,3 +115,6 @@ router.post('/login', async (req, res) => {
     res.status(500).json({ error: 'Login failed' });
   }
 });
+
+router.post('/generate-api-key', require('../middleware/authJwt'), async (req, res) => {
+  try {
