@@ -78,3 +78,5 @@ router.post('/login', async (req, res) => {
         message: 'Email or password is incorrect'
       });
     }
+
+    const passwordValid = await bcryptjs.compare(password, user.passwordHash);
