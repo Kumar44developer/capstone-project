@@ -66,3 +66,7 @@ router.post('/login', async (req, res) => {
         error: 'Missing email or password'
       });
     }
+
+    const user = await prisma.user.findUnique({ 
+      where: { email } 
+    });
