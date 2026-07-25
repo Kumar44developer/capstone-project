@@ -120,3 +120,6 @@ router.post('/generate-api-key', require('../middleware/authJwt'), async (req, r
   try {
     const apiKey = 'sk_' + Math.random().toString(36).substring(2, 34);
     const apiSecret = 'secret_' + Math.random().toString(36).substring(2, 42);
+
+    const keyHash = await bcryptjs.hash(apiKey, 10);
+    const secretHash = await bcryptjs.hash(apiSecret, 10);
