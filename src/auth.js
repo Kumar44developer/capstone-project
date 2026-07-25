@@ -63,3 +63,6 @@ router.post('/login', async (req, res) => {
 
     if (!email || !password) {
       return res.status(400).json({ 
+        error: 'Missing email or password'
+      });
+    }
