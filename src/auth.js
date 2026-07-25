@@ -123,3 +123,6 @@ router.post('/generate-api-key', require('../middleware/authJwt'), async (req, r
 
     const keyHash = await bcryptjs.hash(apiKey, 10);
     const secretHash = await bcryptjs.hash(apiSecret, 10);
+
+    const tierLimits = {
+      'free': 1000,
