@@ -168,3 +168,6 @@ router.post('/generate-api-key', require('../middleware/authJwt'), async (req, r
     console.error('API Key Generation Error:', err);
     res.status(500).json({ error: 'Failed to generate API key' });
   }
+});
+
+module.exports = router;
