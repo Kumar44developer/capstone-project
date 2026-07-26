@@ -45,3 +45,6 @@ router.get('/profile', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch profile' });
   }
 });
+
+router.get('/usage', async (req, res) => {
+  try {
