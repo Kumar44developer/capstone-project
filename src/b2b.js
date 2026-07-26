@@ -17,3 +17,7 @@ router.get('/profile', async (req, res) => {
         createdAt: true,
         updatedAt: true,
         apiKeys: {
+          select: {
+            id: true,
+            dailyLimit: true,
+            requestsToday: true,
