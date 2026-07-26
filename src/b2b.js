@@ -6,3 +6,6 @@ const prisma = new PrismaClient();
 
 router.get('/profile', async (req, res) => {
   try {
+    const user = await prisma.user.findUnique({
+      where: { id: req.user.id },
+      select: {
