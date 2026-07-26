@@ -136,3 +136,6 @@ router.post('/generate-api-key', require('../middleware/authJwt'), async (req, r
     });
 
     const dailyLimit = tierLimits[user.tier] || 1000;
+
+    const record = await prisma.apiKey.create({
+      data: {
