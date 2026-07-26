@@ -53,3 +53,6 @@ router.get('/usage', async (req, res) => {
 
     const logs = await prisma.apiLog.findMany({
       where: {
+        userId: req.user.id,
+        createdAt: { gte: startDate }
+      },
