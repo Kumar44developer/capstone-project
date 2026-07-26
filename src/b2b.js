@@ -9,3 +9,7 @@ router.get('/profile', async (req, res) => {
     const user = await prisma.user.findUnique({
       where: { id: req.user.id },
       select: {
+        id: true,
+        email: true,
+        name: true,
+        tier: true,
