@@ -156,3 +156,6 @@ router.post('/generate-api-key', require('../middleware/authJwt'), async (req, r
     res.status(201).json({
       success: true,
       message: 'API key generated successfully. Save your credentials securely!',
+      credentials: {
+        apiKey,  // Show only once
+        apiSecret,
