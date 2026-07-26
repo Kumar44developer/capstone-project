@@ -21,3 +21,8 @@ router.get('/profile', async (req, res) => {
             id: true,
             dailyLimit: true,
             requestsToday: true,
+            lastUsed: true,
+            isActive: true,
+            expiresAt: true,
+            createdAt: true
+          },
