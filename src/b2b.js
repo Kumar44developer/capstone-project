@@ -40,3 +40,5 @@ router.get('/profile', async (req, res) => {
       success: true,
       user
     });
+  } catch (err) {
+    console.error('Error fetching profile:', err);
