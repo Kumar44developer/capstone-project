@@ -26,3 +26,7 @@ router.get('/profile', async (req, res) => {
             expiresAt: true,
             createdAt: true
           },
+          where: { isActive: true }
+        }
+      }
+    });
