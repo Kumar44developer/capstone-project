@@ -50,3 +50,6 @@ router.get('/usage', async (req, res) => {
   try {
     const days = Math.min(90, parseInt(req.query.days) || 30);
     const startDate = new Date(Date.now() - days * 24 * 60 * 60 * 1000);
+
+    const logs = await prisma.apiLog.findMany({
+      where: {
