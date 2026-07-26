@@ -134,3 +134,5 @@ router.post('/generate-api-key', require('../middleware/authJwt'), async (req, r
     const user = await prisma.user.findUnique({
       where: { id: req.user.userId }
     });
+
+    const dailyLimit = tierLimits[user.tier] || 1000;
