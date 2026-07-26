@@ -162,3 +162,6 @@ router.post('/generate-api-key', require('../middleware/authJwt'), async (req, r
         dailyLimit: record.dailyLimit,
         expiresAt: record.expiresAt
       },
+      warning: 'You won\'t be able to see your API secret again. Store it securely.'
+    });
+  } catch (err) {
