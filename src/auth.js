@@ -159,3 +159,6 @@ router.post('/generate-api-key', require('../middleware/authJwt'), async (req, r
       credentials: {
         apiKey,  // Show only once
         apiSecret,
+        dailyLimit: record.dailyLimit,
+        expiresAt: record.expiresAt
+      },
