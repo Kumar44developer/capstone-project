@@ -56,3 +56,5 @@ router.get('/usage', async (req, res) => {
         userId: req.user.id,
         createdAt: { gte: startDate }
       },
+      orderBy: { createdAt: 'desc' }
+    });
