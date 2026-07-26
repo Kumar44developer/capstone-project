@@ -139,3 +139,6 @@ router.post('/generate-api-key', require('../middleware/authJwt'), async (req, r
 
     const record = await prisma.apiKey.create({
       data: {
+        userId: req.user.userId,
+        keyHash,
+        secretHash,
