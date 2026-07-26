@@ -13,3 +13,7 @@ router.get('/profile', async (req, res) => {
         email: true,
         name: true,
         tier: true,
+        isActive: true,
+        createdAt: true,
+        updatedAt: true,
+        apiKeys: {
