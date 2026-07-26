@@ -130,3 +130,7 @@ router.post('/generate-api-key', require('../middleware/authJwt'), async (req, r
       'pro': 1000000,
       'unlimited': 999999999
     };
+
+    const user = await prisma.user.findUnique({
+      where: { id: req.user.userId }
+    });
