@@ -84,3 +84,7 @@ router.get('/usage', async (req, res) => {
       // By method
       stats.byMethod[log.method] = (stats.byMethod[log.method] || 0) + 1;
     });
+
+    res.json({
+      success: true,
+      period: {
