@@ -67,3 +67,6 @@ router.get('/usage', async (req, res) => {
       totalBytesTransferred: logs.reduce((a, b) => a + b.bytesTransferred, 0),
       byEndpoint: {},
       byDay: {},
+      byStatus: {},
+      byMethod: {}
+    };
