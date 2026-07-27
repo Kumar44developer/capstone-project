@@ -131,3 +131,5 @@ router.get('/quotas', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch quotas' });
   }
 });
+
+module.exports = router;
