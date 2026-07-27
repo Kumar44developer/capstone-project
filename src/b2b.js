@@ -74,3 +74,6 @@ router.get('/usage', async (req, res) => {
     logs.forEach(log => {
       // By endpoint
       stats.byEndpoint[log.endpoint] = (stats.byEndpoint[log.endpoint] || 0) + 1;
+
+      const date = log.createdAt.toISOString().split('T')[0];
+      stats.byDay[date] = (stats.byDay[date] || 0) + 1;
