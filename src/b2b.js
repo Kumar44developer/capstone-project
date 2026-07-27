@@ -117,3 +117,7 @@ router.get('/quotas', async (req, res) => {
       dailyLimit: key.dailyLimit,
       requestsToday: key.requestsToday,
       remainingRequests: key.dailyLimit - key.requestsToday,
+      percentageUsed: Math.round((key.requestsToday / key.dailyLimit) * 100),
+      resetTime: new Date(new Date().setHours(24, 0, 0, 0)).toISOString(),
+      lastUsed: key.lastUsed
+    }));
