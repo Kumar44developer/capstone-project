@@ -58,3 +58,7 @@ router.get('/usage', async (req, res) => {
       },
       orderBy: { createdAt: 'desc' }
     });
+
+    const stats = {
+      totalRequests: logs.length,
+      avgResponseTime: logs.length > 0 
