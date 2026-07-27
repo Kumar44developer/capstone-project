@@ -99,3 +99,8 @@ router.get('/usage', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch usage statistics' });
   }
 });
+
+router.get('/quotas', async (req, res) => {
+  try {
+    const apiKeys = await prisma.apiKey.findMany({
+
