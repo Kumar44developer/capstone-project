@@ -121,3 +121,7 @@ router.get('/quotas', async (req, res) => {
       resetTime: new Date(new Date().setHours(24, 0, 0, 0)).toISOString(),
       lastUsed: key.lastUsed
     }));
+
+    res.json({
+      success: true,
+      quotas
