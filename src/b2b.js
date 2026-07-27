@@ -95,3 +95,7 @@ router.get('/usage', async (req, res) => {
       stats
     });
   } catch (err) {
+    console.error('Error fetching usage stats:', err);
+    res.status(500).json({ error: 'Failed to fetch usage statistics' });
+  }
+});
