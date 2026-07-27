@@ -111,3 +111,7 @@ router.get('/quotas', async (req, res) => {
         lastUsed: true
       }
     });
+
+    const quotas = apiKeys.map(key => ({
+      keyId: key.id,
+      dailyLimit: key.dailyLimit,
