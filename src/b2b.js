@@ -88,3 +88,7 @@ router.get('/usage', async (req, res) => {
     res.json({
       success: true,
       period: {
+        days,
+        from: startDate.toISOString(),
+        to: new Date().toISOString()
+      },
