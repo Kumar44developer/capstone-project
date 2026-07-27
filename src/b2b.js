@@ -125,3 +125,5 @@ router.get('/quotas', async (req, res) => {
     res.json({
       success: true,
       quotas
+    });
+  } catch (err) {
