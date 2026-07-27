@@ -77,3 +77,6 @@ router.get('/usage', async (req, res) => {
 
       const date = log.createdAt.toISOString().split('T')[0];
       stats.byDay[date] = (stats.byDay[date] || 0) + 1;
+
+      const statusGroup = `${Math.floor(log.status / 100)}xx`;
+      stats.byStatus[statusGroup] = (stats.byStatus[statusGroup] || 0) + 1;
