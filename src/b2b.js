@@ -65,3 +65,5 @@ router.get('/usage', async (req, res) => {
         ? Math.round(logs.reduce((a, b) => a + b.responseTime, 0) / logs.length)
         : 0,
       totalBytesTransferred: logs.reduce((a, b) => a + b.bytesTransferred, 0),
+      byEndpoint: {},
+      byDay: {},
