@@ -70,3 +70,7 @@ router.get('/usage', async (req, res) => {
       byStatus: {},
       byMethod: {}
     };
+
+    logs.forEach(log => {
+      // By endpoint
+      stats.byEndpoint[log.endpoint] = (stats.byEndpoint[log.endpoint] || 0) + 1;
