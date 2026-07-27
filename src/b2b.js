@@ -106,3 +106,8 @@ router.get('/quotas', async (req, res) => {
       where: { userId: req.user.id, isActive: true },
       select: {
         id: true,
+        dailyLimit: true,
+        requestsToday: true,
+        lastUsed: true
+      }
+    });
