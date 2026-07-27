@@ -127,3 +127,7 @@ router.get('/quotas', async (req, res) => {
       quotas
     });
   } catch (err) {
+    console.error('Error fetching quotas:', err);
+    res.status(500).json({ error: 'Failed to fetch quotas' });
+  }
+});
