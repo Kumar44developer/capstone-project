@@ -92,3 +92,6 @@ router.get('/usage', async (req, res) => {
         from: startDate.toISOString(),
         to: new Date().toISOString()
       },
+      stats
+    });
+  } catch (err) {
