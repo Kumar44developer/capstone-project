@@ -103,4 +103,6 @@ router.get('/usage', async (req, res) => {
 router.get('/quotas', async (req, res) => {
   try {
     const apiKeys = await prisma.apiKey.findMany({
-
+      where: { userId: req.user.id, isActive: true },
+      select: {
+        id: true,
