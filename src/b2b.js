@@ -80,3 +80,7 @@ router.get('/usage', async (req, res) => {
 
       const statusGroup = `${Math.floor(log.status / 100)}xx`;
       stats.byStatus[statusGroup] = (stats.byStatus[statusGroup] || 0) + 1;
+
+      // By method
+      stats.byMethod[log.method] = (stats.byMethod[log.method] || 0) + 1;
+    });
