@@ -25,3 +25,7 @@ router.get('/states', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch states' });
   }
 });
+
+router.get('/states/:stateId/districts', async (req, res) => {
+  try {
+    const stateId = parseInt(req.params.stateId);
