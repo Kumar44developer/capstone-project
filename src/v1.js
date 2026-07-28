@@ -22,3 +22,6 @@ router.get('/states', async (req, res) => {
     });
   } catch (err) {
     console.error('Error fetching states:', err);
+    res.status(500).json({ error: 'Failed to fetch states' });
+  }
+});
