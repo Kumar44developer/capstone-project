@@ -37,3 +37,8 @@ router.get('/states/:stateId/districts', async (req, res) => {
     if (!state) {
       return res.status(404).json({ error: 'State not found' });
     }
+
+    const districts = await prisma.district.findMany({
+      where: { stateId },
+      select: {
+        id: true,
