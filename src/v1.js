@@ -42,3 +42,6 @@ router.get('/states/:stateId/districts', async (req, res) => {
       where: { stateId },
       select: {
         id: true,
+        districtCode: true,
+        districtName: true
+      },
