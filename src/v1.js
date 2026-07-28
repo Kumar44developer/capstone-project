@@ -33,3 +33,7 @@ router.get('/states/:stateId/districts', async (req, res) => {
     const state = await prisma.state.findUnique({
       where: { id: stateId }
     });
+
+    if (!state) {
+      return res.status(404).json({ error: 'State not found' });
+    }
