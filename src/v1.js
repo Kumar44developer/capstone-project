@@ -47,3 +47,8 @@ router.get('/states/:stateId/districts', async (req, res) => {
       },
       orderBy: { districtName: 'asc' }
     });
+
+
+    res.json({
+      success: true,
+      state: state.stateName,
