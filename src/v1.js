@@ -7,3 +7,8 @@ const prisma = new PrismaClient();
 router.get('/states', async (req, res) => {
   try {
     const states = await prisma.state.findMany({
+      select: {
+        id: true,
+        stateCode: true,
+        stateName: true
+      },
