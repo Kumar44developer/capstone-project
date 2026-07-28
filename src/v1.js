@@ -20,3 +20,5 @@ router.get('/states', async (req, res) => {
       count: states.length,
       data: states
     });
+  } catch (err) {
+    console.error('Error fetching states:', err);
