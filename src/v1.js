@@ -29,3 +29,7 @@ router.get('/states', async (req, res) => {
 router.get('/states/:stateId/districts', async (req, res) => {
   try {
     const stateId = parseInt(req.params.stateId);
+
+    const state = await prisma.state.findUnique({
+      where: { id: stateId }
+    });
