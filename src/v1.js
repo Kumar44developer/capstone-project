@@ -14,3 +14,7 @@ router.get('/states', async (req, res) => {
       },
       orderBy: { stateName: 'asc' }
     });
+
+    res.json({
+      success: true,
+      count: states.length,
