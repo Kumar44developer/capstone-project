@@ -18,3 +18,5 @@ router.get('/states', async (req, res) => {
     res.json({
       success: true,
       count: states.length,
+      data: states
+    });
