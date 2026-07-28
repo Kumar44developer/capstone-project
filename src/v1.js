@@ -12,3 +12,5 @@ router.get('/states', async (req, res) => {
         stateCode: true,
         stateName: true
       },
+      orderBy: { stateName: 'asc' }
+    });
