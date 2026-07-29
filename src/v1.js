@@ -106,3 +106,5 @@ router.get('/subdistricts/:subDistrictId/villages', async (req, res) => {
 
     const subDistrict = await prisma.subDistrict.findUnique({
       where: { id: subDistrictId },
+      include: { district: { include: { state: true } } }
+    });
