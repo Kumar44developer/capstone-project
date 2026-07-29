@@ -146,3 +146,7 @@ router.get('/subdistricts/:subDistrictId/villages', async (req, res) => {
       data: villages
     });
   } catch (err) {
+    console.error('Error fetching villages:', err);
+    res.status(500).json({ error: 'Failed to fetch villages' });
+  }
+});
