@@ -108,3 +108,7 @@ router.get('/subdistricts/:subDistrictId/villages', async (req, res) => {
       where: { id: subDistrictId },
       include: { district: { include: { state: true } } }
     });
+
+    if (!subDistrict) {
+      return res.status(404).json({ error: 'Sub-district not found' });
+    }
