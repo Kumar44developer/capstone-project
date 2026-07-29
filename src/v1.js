@@ -100,3 +100,6 @@ router.get('/districts/:districtId/subdistricts', async (req, res) => {
 router.get('/subdistricts/:subDistrictId/villages', async (req, res) => {
   try {
     const subDistrictId = parseInt(req.params.subDistrictId);
+    const page = Math.max(1, parseInt(req.query.page) || 1);
+    const limit = Math.min(100, parseInt(req.query.limit) || 50);
+    const skip = (page - 1) * limit;
