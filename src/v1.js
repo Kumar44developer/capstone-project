@@ -133,3 +133,6 @@ router.get('/subdistricts/:subDistrictId/villages', async (req, res) => {
     res.json({
       success: true,
       subDistrict: subDistrict.subDistrictName,
+      district: subDistrict.district.districtName,
+      state: subDistrict.district.state.stateName,
+      pagination: {
