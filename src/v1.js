@@ -83,3 +83,7 @@ router.get('/districts/:districtId/subdistricts', async (req, res) => {
       },
       orderBy: { subDistrictName: 'asc' }
     });
+
+    res.json({
+      success: true,
+      district: district.districtName,
