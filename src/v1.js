@@ -136,3 +136,7 @@ router.get('/subdistricts/:subDistrictId/villages', async (req, res) => {
       district: subDistrict.district.districtName,
       state: subDistrict.district.state.stateName,
       pagination: {
+        total,
+        page,
+        limit,
+        pages: Math.ceil(total / limit),
