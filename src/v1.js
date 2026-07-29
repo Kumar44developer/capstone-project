@@ -92,3 +92,7 @@ router.get('/districts/:districtId/subdistricts', async (req, res) => {
       data: subDistricts
     });
   } catch (err) {
+    console.error('Error fetching sub-districts:', err);
+    res.status(500).json({ error: 'Failed to fetch sub-districts' });
+  }
+});
