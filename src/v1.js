@@ -77,3 +77,7 @@ router.get('/districts/:districtId/subdistricts', async (req, res) => {
     const subDistricts = await prisma.subDistrict.findMany({
       where: { districtId },
       select: {
+        id: true,
+        subDistrictCode: true,
+        subDistrictName: true
+      },
