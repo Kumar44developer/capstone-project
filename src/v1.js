@@ -125,3 +125,7 @@ router.get('/subdistricts/:subDistrictId/villages', async (req, res) => {
       take: limit,
       orderBy: { villageName: 'asc' }
     });
+
+    const total = await prisma.village.count({
+      where: { subDistrictId }
+    });
