@@ -103,3 +103,6 @@ router.get('/subdistricts/:subDistrictId/villages', async (req, res) => {
     const page = Math.max(1, parseInt(req.query.page) || 1);
     const limit = Math.min(100, parseInt(req.query.limit) || 50);
     const skip = (page - 1) * limit;
+
+    const subDistrict = await prisma.subDistrict.findUnique({
+      where: { id: subDistrictId },
