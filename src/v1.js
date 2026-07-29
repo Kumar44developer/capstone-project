@@ -52,3 +52,6 @@ router.get('/states/:stateId/districts', async (req, res) => {
     res.json({
       success: true,
       state: state.stateName,
+      count: districts.length,
+      data: districts
+    });
