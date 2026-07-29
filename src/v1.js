@@ -90,3 +90,5 @@ router.get('/districts/:districtId/subdistricts', async (req, res) => {
       state: district.state.stateName,
       count: subDistricts.length,
       data: subDistricts
+    });
+  } catch (err) {
