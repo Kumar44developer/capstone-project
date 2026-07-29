@@ -140,3 +140,6 @@ router.get('/subdistricts/:subDistrictId/villages', async (req, res) => {
         page,
         limit,
         pages: Math.ceil(total / limit),
+        hasNext: page < Math.ceil(total / limit),
+        hasPrev: page > 1
+      },
