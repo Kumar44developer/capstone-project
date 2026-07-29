@@ -121,3 +121,7 @@ router.get('/subdistricts/:subDistrictId/villages', async (req, res) => {
         villageCode: true,
         villageName: true
       },
+      skip,
+      take: limit,
+      orderBy: { villageName: 'asc' }
+    });
