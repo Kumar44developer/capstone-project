@@ -55,3 +55,8 @@ router.get('/states/:stateId/districts', async (req, res) => {
       count: districts.length,
       data: districts
     });
+  } catch (err) {
+    console.error('Error fetching districts:', err);
+    res.status(500).json({ error: 'Failed to fetch districts' });
+  }
+});
