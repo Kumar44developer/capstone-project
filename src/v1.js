@@ -64,3 +64,6 @@ router.get('/states/:stateId/districts', async (req, res) => {
 router.get('/districts/:districtId/subdistricts', async (req, res) => {
   try {
     const districtId = parseInt(req.params.districtId);
+
+    const district = await prisma.district.findUnique({
+      where: { id: districtId },
