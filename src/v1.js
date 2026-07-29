@@ -96,3 +96,7 @@ router.get('/districts/:districtId/subdistricts', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch sub-districts' });
   }
 });
+
+router.get('/subdistricts/:subDistrictId/villages', async (req, res) => {
+  try {
+    const subDistrictId = parseInt(req.params.subDistrictId);
