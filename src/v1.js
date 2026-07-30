@@ -184,3 +184,7 @@ router.get('/villages/search', async (req, res) => {
             subDistrictName: true,
             district: {
               select: {
+                id: true,
+                districtName: true,
+                state: {
+                  select: {
