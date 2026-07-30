@@ -233,3 +233,11 @@ router.get('/villages/:villageId/hierarchy', async (req, res) => {
         subDistrict: {
           include: {
             district: {
+              include: {
+                state: true
+              }
+            }
+          }
+        }
+      }
+    });
