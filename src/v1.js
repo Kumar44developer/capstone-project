@@ -188,3 +188,12 @@ router.get('/villages/search', async (req, res) => {
                 districtName: true,
                 state: {
                   select: {
+                    id: true,
+                    stateName: true
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
