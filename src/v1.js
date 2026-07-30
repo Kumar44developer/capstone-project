@@ -169,3 +169,7 @@ router.get('/villages/search', async (req, res) => {
     const villages = await prisma.village.findMany({
       where: {
         villageName: { 
+          contains: query, 
+          mode: 'insensitive' 
+        }
+      },
