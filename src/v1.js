@@ -276,3 +276,5 @@ router.get('/villages/:villageId/hierarchy', async (req, res) => {
 router.get('/stats', async (req, res) => {
   try {
     const [stateCount, districtCount, subDistrictCount, villageCount] = await Promise.all([
+      prisma.state.count(),
+      prisma.district.count(),
