@@ -254,3 +254,8 @@ router.get('/villages/:villageId/hierarchy', async (req, res) => {
           code: village.subDistrict.district.state.stateCode,
           name: village.subDistrict.district.state.stateName
         },
+        district: {
+          id: village.subDistrict.district.id,
+          code: village.subDistrict.district.districtCode,
+          name: village.subDistrict.district.districtName
+        },
