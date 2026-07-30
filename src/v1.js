@@ -225,3 +225,8 @@ router.get('/villages/search', async (req, res) => {
 router.get('/villages/:villageId/hierarchy', async (req, res) => {
   try {
     const villageId = parseInt(req.params.villageId);
+
+    
+    const village = await prisma.village.findUnique({
+      where: { id: villageId },
+      include: {
