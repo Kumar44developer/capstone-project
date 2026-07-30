@@ -267,3 +267,8 @@ router.get('/villages/:villageId/hierarchy', async (req, res) => {
       },
     formatted: `${village.villageName}, ${village.subDistrict.subDistrictName}, ${village.subDistrict.district.districtName}, ${village.subDistrict.district.state.stateName}, India`
     });
+  } catch (err) {
+    console.error('Error fetching village hierarchy:', err);
+    res.status(500).json({ error: 'Failed to fetch village hierarchy' });
+  }
+});
