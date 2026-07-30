@@ -265,3 +265,5 @@ router.get('/villages/:villageId/hierarchy', async (req, res) => {
           name: village.villageName
         }
       },
+    formatted: `${village.villageName}, ${village.subDistrict.subDistrictName}, ${village.subDistrict.district.districtName}, ${village.subDistrict.district.state.stateName}, India`
+    });
