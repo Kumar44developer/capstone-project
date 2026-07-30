@@ -153,3 +153,5 @@ router.get('/subdistricts/:subDistrictId/villages', async (req, res) => {
 
 router.get('/villages/search', async (req, res) => {
   try {
+    const query = req.query.q;
+    const limit = Math.min(50, parseInt(req.query.limit) || 20);
