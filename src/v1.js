@@ -230,3 +230,6 @@ router.get('/villages/:villageId/hierarchy', async (req, res) => {
     const village = await prisma.village.findUnique({
       where: { id: villageId },
       include: {
+        subDistrict: {
+          include: {
+            district: {
