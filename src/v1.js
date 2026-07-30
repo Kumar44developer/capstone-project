@@ -197,3 +197,5 @@ router.get('/villages/search', async (req, res) => {
           }
         }
       },
+      orderBy: { villageName: 'asc' }
+    });
