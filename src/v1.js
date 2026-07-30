@@ -206,3 +206,6 @@ router.get('/villages/search', async (req, res) => {
       villageName: v.villageName,
       subDistrict: v.subDistrict.subDistrictName,
       district: v.subDistrict.district.districtName,
+      state: v.subDistrict.district.state.stateName,
+      formatted: `${v.villageName}, ${v.subDistrict.subDistrictName}, ${v.subDistrict.district.districtName}, ${v.subDistrict.district.state.stateName}, India`
+    }));
