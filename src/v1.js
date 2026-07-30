@@ -173,3 +173,6 @@ router.get('/villages/search', async (req, res) => {
           mode: 'insensitive' 
         }
       },
+      take: limit,
+      select: {
+        id: true,
