@@ -216,3 +216,8 @@ router.get('/villages/search', async (req, res) => {
       count: formatted.length,
       data: formatted
     });
+  } catch (err) {
+    console.error('Error searching villages:', err);
+    res.status(500).json({ error: 'Search failed' });
+  }
+});
