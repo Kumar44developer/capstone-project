@@ -164,3 +164,8 @@ router.get('/villages/search', async (req, res) => {
         data: []
       });
     }
+
+    
+    const villages = await prisma.village.findMany({
+      where: {
+        villageName: { 
