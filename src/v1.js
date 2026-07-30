@@ -272,3 +272,7 @@ router.get('/villages/:villageId/hierarchy', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch village hierarchy' });
   }
 });
+
+router.get('/stats', async (req, res) => {
+  try {
+    const [stateCount, districtCount, subDistrictCount, villageCount] = await Promise.all([
