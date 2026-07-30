@@ -160,3 +160,7 @@ router.get('/villages/search', async (req, res) => {
     if (!query || query.length < 2) {
       return res.json({
         success: true,
+        message: 'Minimum 2 characters required for search',
+        data: []
+      });
+    }
