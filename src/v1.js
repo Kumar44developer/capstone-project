@@ -221,3 +221,7 @@ router.get('/villages/search', async (req, res) => {
     res.status(500).json({ error: 'Search failed' });
   }
 });
+
+router.get('/villages/:villageId/hierarchy', async (req, res) => {
+  try {
+    const villageId = parseInt(req.params.villageId);
