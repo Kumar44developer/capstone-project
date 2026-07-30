@@ -150,3 +150,6 @@ router.get('/subdistricts/:subDistrictId/villages', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch villages' });
   }
 });
+
+router.get('/villages/search', async (req, res) => {
+  try {
