@@ -176,3 +176,7 @@ router.get('/villages/search', async (req, res) => {
       take: limit,
       select: {
         id: true,
+        villageCode: true,
+        villageName: true,
+        subDistrict: {
+          select: {
