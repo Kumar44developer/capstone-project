@@ -281,3 +281,7 @@ router.get('/stats', async (req, res) => {
       prisma.subDistrict.count(),
       prisma.village.count()
     ]);
+
+    res.json({
+      success: true,
+      stats: {
