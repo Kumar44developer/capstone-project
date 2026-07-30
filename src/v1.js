@@ -213,3 +213,6 @@ router.get('/villages/search', async (req, res) => {
     res.json({
       success: true,
       query,
+      count: formatted.length,
+      data: formatted
+    });
