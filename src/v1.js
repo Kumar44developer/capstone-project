@@ -199,3 +199,7 @@ router.get('/villages/search', async (req, res) => {
       },
       orderBy: { villageName: 'asc' }
     });
+
+    const formatted = villages.map(v => ({
+      id: v.id,
+      villageCode: v.villageCode,
