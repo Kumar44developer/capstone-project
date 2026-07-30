@@ -203,3 +203,6 @@ router.get('/villages/search', async (req, res) => {
     const formatted = villages.map(v => ({
       id: v.id,
       villageCode: v.villageCode,
+      villageName: v.villageName,
+      subDistrict: v.subDistrict.subDistrictName,
+      district: v.subDistrict.district.districtName,
