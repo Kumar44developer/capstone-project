@@ -241,3 +241,7 @@ router.get('/villages/:villageId/hierarchy', async (req, res) => {
         }
       }
     });
+    
+    if (!village) {
+      return res.status(404).json({ error: 'Village not found' });
+    }
