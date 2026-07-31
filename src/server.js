@@ -22,3 +22,5 @@ app.use('/api/v1', limiter);
 
 app.get('/health', (req, res) => {
   res.json({ 
+    status: 'OK',
+    timestamp: new Date().toISOString(),
