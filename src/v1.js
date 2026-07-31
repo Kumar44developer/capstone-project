@@ -292,3 +292,5 @@ router.get('/stats', async (req, res) => {
         total: stateCount + districtCount + subDistrictCount + villageCount
       }
     });
+  } catch (err) {
+    console.error('Error fetching stats:', err);
