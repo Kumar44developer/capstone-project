@@ -32,3 +32,7 @@ app.use('/api/v1', require('./routes/v1'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/b2b', require('./middleware/authApiKey'), require('./routes/b2b'));
 app.use('/api/admin', require('./middleware/authJwt'), require('./middleware/adminAuth'), require('./routes/admin'));
+
+app.use((req, res) => {
+  res.status(404).json({ error: 'Route not found' });
+});
