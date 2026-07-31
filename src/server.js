@@ -27,3 +27,6 @@ app.get('/health', (req, res) => {
     environment: process.env.NODE_ENV
   });
 });
+
+app.use('/api/v1', require('./routes/v1'));
+app.use('/api/auth', require('./routes/auth'));
