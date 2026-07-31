@@ -285,3 +285,10 @@ router.get('/stats', async (req, res) => {
     res.json({
       success: true,
       stats: {
+        states: stateCount,
+        districts: districtCount,
+        subDistricts: subDistrictCount,
+        villages: villageCount,
+        total: stateCount + districtCount + subDistrictCount + villageCount
+      }
+    });
