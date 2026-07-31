@@ -7,3 +7,4 @@ const rateLimit = require('express-rate-limit');
 // Initialize environment
 dotenv.config();
 const app = express();
+const prisma = new PrismaClient();
