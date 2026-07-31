@@ -15,3 +15,6 @@ app.use(cors());
 
 const limiter = rateLimit({
   windowMs: 60 * 60 * 1000,
+  max: 100,  // 100 requests per hour for public endpoints
+  message: 'Too many requests, please try again later.'
+});
