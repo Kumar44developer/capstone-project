@@ -12,3 +12,6 @@ const prisma = new PrismaClient();
 app.use(express.json());
 
 app.use(cors());
+
+const limiter = rateLimit({
+  windowMs: 60 * 60 * 1000,
