@@ -44,3 +44,6 @@ app.use((err, req, res, next) => {
     message: process.env.NODE_ENV === 'development' ? err.message : undefined
   });
 });
+
+const PORT = process.env.API_PORT || 5000;
+app.listen(PORT, () => {
