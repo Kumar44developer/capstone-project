@@ -51,3 +51,6 @@ app.listen(PORT, () => {
   console.log(`📡 Environment: ${process.env.NODE_ENV}`);
   console.log(`📊 Database: ${process.env.DATABASE_URL ? 'Connected' : 'Not configured'}\n`);
 });
+
+process.on('SIGTERM', () => {
+  console.log('SIGTERM received, shutting down gracefully...');
