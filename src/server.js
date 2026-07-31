@@ -18,3 +18,4 @@ const limiter = rateLimit({
   max: 100,  // 100 requests per hour for public endpoints
   message: 'Too many requests, please try again later.'
 });
+app.use('/api/v1', limiter);
