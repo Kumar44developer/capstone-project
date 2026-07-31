@@ -19,3 +19,6 @@ const limiter = rateLimit({
   message: 'Too many requests, please try again later.'
 });
 app.use('/api/v1', limiter);
+
+app.get('/health', (req, res) => {
+  res.json({ 
