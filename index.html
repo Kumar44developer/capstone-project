@@ -92,3 +92,7 @@
   .nav-links a:hover{color:var(--indigo)}
   .nav-auth{order:4;display:none;flex-basis:100%;flex-direction:column;gap:10px;padding:4px 0 14px}
   .nav-auth .btn{width:100%}
+
+  .nav-toggle:checked ~ .nav-links{display:flex}
+  .nav-toggle:checked ~ .nav-auth{display:flex}
+  .nav-toggle:checked ~ .nav-toggle-btn span:nth-child(1){transform:translateY(7px) rotate(45deg)}
