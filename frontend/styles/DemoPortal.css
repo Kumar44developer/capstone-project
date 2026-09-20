@@ -1,115 +1,348 @@
-import axios from 'axios';
+.demo-portal {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #1a202c;
+}
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+.loading-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: #f4f7fb;
+}
 
-const api = axios.create({
-  baseURL: API_BASE_URL,
-  timeout: 30000,
-  headers: {
-    'Content-Type': 'application/json',
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #0d47a1;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.hero {
+  background: linear-gradient(135deg, #0d47a1, #1565c0);
+  color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.stat strong {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  font-size: 1.4rem;
+  margin: 0 0 1.25rem;
+  color: #1a202c;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: #0d47a1;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: #0d47a1;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1565c0;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: #1a202c;
+}
+
+.btn-secondary:hover {
+  background: #cbd5e0;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #0d47a1;
+  border: 2px solid #0d47a1;
+}
+
+.btn-outline:hover {
+  background: #e3f2fd;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+.search-results {
+  margin-top: 1.25rem;
+}
+
+.search-results h3 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+  color: #4a5568;
+}
+
+.results-list {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.result-item {
+  padding: 0.875rem 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.15s;
+}
+
+.result-item:hover {
+  background: #f7fafc;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-title {
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.result-path {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-top: 0.25rem;
+}
+
+.hierarchy-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.control-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.control-group select {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.control-group select:focus {
+  border-color: #0d47a1;
+}
+
+.control-group select:disabled {
+  background: #f7fafc;
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.detail-item {
+  background: #f7fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.detail-item label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #718096;
+  display: block;
+  margin-bottom: 0.375rem;
+}
+
+.detail-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.detail-code {
+  font-size: 0.85rem;
+  color: #a0aec0;
+  margin-top: 0.25rem;
+}
+
+.formatted-address {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: #ebf8ff;
+  border-radius: 8px;
+  border: 1px solid #bee3f8;
+}
+
+.formatted-address h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  color: #2b6cb0;
+}
+
+.address-text {
+  font-size: 1.05rem;
+  color: #2d3748;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.cta-section {
+  text-align: center;
+  background: linear-gradient(135deg, #ebf8ff, #e9d8fd);
+}
+
+.cta-section p {
+  color: #4a5568;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.api-docs .code-block {
+  background: #1a202c;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.api-docs pre {
+  color: #e2e8f0;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Fira Code', 'Consolas', monospace;
+}
+
+@media (max-width: 640px) {
+  .hierarchy-controls {
+    grid-template-columns: 1fr;
   }
-});
 
-api.interceptors.request.use(config => {
-  const token = localStorage.getItem('userToken');
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
+  .details-grid {
+    grid-template-columns: 1fr;
   }
-  return config;
-});
 
-// Interceptor to handle errors
-api.interceptors.response.use(
-  response => response,
-  error => {
-    if (error.response?.status === 401) {
-      localStorage.removeItem('userToken');
-      window.location.href = '/login';
-    }
-    return Promise.reject(error);
+  .search-form {
+    flex-direction: column;
   }
-);
 
-export const apiService = {
-
-  
-  getStates: async () => {
-    const response = await api.get('/api/v1/states');
-    return response.data.data;
-  },
-
-  getDistricts: async (stateId) => {
-    const response = await api.get(`/api/v1/states/${stateId}/districts`);
-    return response.data.data;
-  },
-
-  getSubDistricts: async (districtId) => {
-    const response = await api.get(`/api/v1/districts/${districtId}/subdistricts`);
-    return response.data.data;
-  },
-
-  getVillages: async (subDistrictId, page = 1, limit = 50) => {
-    const response = await api.get(`/api/v1/subdistricts/${subDistrictId}/villages?page=${page}&limit=${limit}`);
-    return response.data;
-  },
-
-
-  searchVillages: async (query, limit = 20) => {
-    const response = await api.get(`/api/v1/villages/search?q=${query}&limit=${limit}`);
-    return response.data.data;
-  },
-
-  getVillageHierarchy: async (villageId) => {
-    const response = await api.get(`/api/v1/villages/${villageId}/hierarchy`);
-    return response.data.hierarchy;
-  },
-
-  getStats: async () => {
-    const response = await api.get('/api/v1/stats');
-    return response.data.stats;
-  },
-
-
-  register: async (email, name, password) => {
-    const response = await api.post('/api/auth/register', { email, name, password });
-    return response.data.user;
-  },
-
-  login: async (email, password) => {
-    const response = await api.post('/api/auth/login', { email, password });
-    localStorage.setItem('userToken', response.data.token);
-    localStorage.setItem('user', JSON.stringify(response.data.user));
-    return response.data;
-  },
-
-
-  logout: () => {
-    localStorage.removeItem('userToken');
-    localStorage.removeItem('user');
-  },
-
-
-  generateApiKey: async () => {
-    const response = await api.post('/api/auth/generate-api-key');
-    return response.data.credentials;
-  },
-
-  getProfile: async () => {
-    const response = await api.get('/api/b2b/profile');
-    return response.data.user;
-  },
-
-
-  getUsage: async (days = 30) => {
-    const response = await api.get(`/b2b/usage?days=${days}`);
-    return response.data.stats;
-  },
-
-
-  getQuotas: async () => {
-    const response = await api.get('/b2b/quotas');
-    return response.data.quotas;
+  .stats-bar {
+    gap: 1rem;
   }
-};
 
-export default api;
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
