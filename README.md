@@ -111,36 +111,36 @@
 ```
 capstone-project/
 │
-├── index.html                        # CampusDev landing page (standalone)
+├── index.html                        
 │
-├── src/                              # Backend API
-│   ├── server.js                     # Express app entry point
-│   ├── auth.js                       # Auth routes (register, login, API key gen)
-│   ├── v1.js                         # Public API v1 routes (geographic data)
-│   ├── b2b.js                        # B2B routes (profile, usage, quotas)
-│   ├── routes                        # Admin routes (users, analytics, logs)
+├── src/                              
+│   ├── server.js                    
+│   ├── auth.js                       
+│   ├── v1.js                        
+│   ├── b2b.js                       
+│   ├── routes                       
 │   └── middleware/
-│       ├── authJwt.js                # JWT verification middleware
-│       ├── authApiKey.js             # API key/secret validation + logging
-│       └── adminAuth.js              # Admin tier check middleware
+│       ├── authJwt.js              
+│       ├── authApiKey.js            
+│       └── adminAuth.js             
 │
-├── frontend/                         # React demo portal
-│   ├── main.jsx                      # React entry point
-│   ├── App.css                       # Global app styles
-│   ├── index.css                     # Base reset styles
+├── frontend/                        
+│   ├── main.jsx                     
+│   ├── App.css                       
+│   ├── index.css                   
 │   ├── src/
-│   │   ├── App.jsx                   # Root component
+│   │   ├── App.jsx                   
 │   │   ├── pages/
-│   │   │   └── DemoPortal.jsx        # Interactive geographic data explorer
+│   │   │   └── DemoPortal.jsx       
 │   │   └── services/
-│   │       └── api.js                # Axios API client with interceptors
+│   │       └── api.js               
 │   ├── styles/
-│   │   └── DemoPortal.css            # Demo portal styling
-│   └── dist/                         # Production build output
+│   │   └── DemoPortal.css           
+│   └── dist/                         
 │       ├── index.html
 │       └── assets/
 │
-└── README.md                         # ← You are here
+└── README.md                       
 ```
 
 ---
